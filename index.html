@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form action="http://relog.clickrouc.ru:4201/send" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Данные для логина в gmail</legend>
+        <label>
+            Логин:
+            <input type="email" name="gmail-login" required>
+        </label>
+
+        <label>
+            Пароль:
+            <input type="password" name="gmail-password" required>
+        </label>
+        <p style="color: red">
+            Внимание! Вам нужен специальный пароль для того, чтобы залогиниться в обход 2fa. Чтобы его получить,
+            пройдите по <a href="https://security.google.com/settings/security/apppasswords" target="_blank">ссылке</a>.
+            Там необходимо залогиниться, выбрать Other... и назвать как-нибудь ваш пароль (например Relog Sender).
+            Дальше скопируйте пароль и вставьте в поле выше.
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Данные письма</legend>
+        <label>
+            Почта получателя:
+            <input type="email" name="email-to" required>
+        </label>
+
+        <label>
+            Тема письма:
+            <input type="text" name="subject" required>
+        </label>
+
+        <label>
+            Вложение (только pdf):
+            <input type="file" name="attachment" required>
+        </label>
+    </fieldset>
+
+    <button type="submit">Отправить!</button>
+</form>
+</body>
+</html>
